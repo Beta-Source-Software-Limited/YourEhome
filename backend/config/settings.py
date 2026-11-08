@@ -51,7 +51,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 9,
 }
-CORS_ALLOWED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
+#CORS_ALLOWED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
@@ -64,5 +64,14 @@ SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_HTTPONLY = True
 X_FRAME_OPTIONS = "DENY"
 
-CSRF_TRUSTED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
+#CSRF_TRUSTED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://evnivo.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://evnivo.vercel.app",
+]
