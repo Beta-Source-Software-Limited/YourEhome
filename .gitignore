@@ -26,3 +26,5 @@ media/
 
 # Logs
 *.log
+.vercel
+.env*
