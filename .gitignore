@@ -1,0 +1,28 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Next.js / Node.js
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+
+# Python / Django
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.sqlite3
+staticfiles/
+media/
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
