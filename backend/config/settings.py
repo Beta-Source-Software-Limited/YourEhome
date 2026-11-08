@@ -9,7 +9,7 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1,.vercel.a
 INSTALLED_APPS = [
     "django.contrib.admin", "django.contrib.auth", "django.contrib.contenttypes",
     "django.contrib.sessions", "django.contrib.messages", "django.contrib.staticfiles",
-    "rest_framework", "django_filters", "corsheaders", "realestate",    "corsheaders"
+    "rest_framework", "django_filters", "corsheaders", "realestate"
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware", "corsheaders.middleware.CorsMiddleware",
@@ -66,7 +66,7 @@ X_FRAME_OPTIONS = "DENY"
 
 CORS_ALLOWED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
 
-CSRF_TRUSTED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
+#CSRF_TRUSTED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", "http://localhost:3000").split(",") if s.strip()]
 
 # CORS_ALLOWED_ORIGINS = [
 #     "https://evnivo.vercel.app",
@@ -74,6 +74,6 @@ CSRF_TRUSTED_ORIGINS = [s.strip() for s in os.getenv("DJANGO_CORS_ALLOWED_ORIGIN
 #     "http://localhost:5173",
 # ]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://evnivo.vercel.app",
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://yourehome.vercel.app"
+]
