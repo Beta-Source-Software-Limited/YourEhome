@@ -2,7 +2,7 @@
 import type { Agent, InquiryPayload, Paginated, Property } from "./types";
 
 // Browser calls use the public URL; server-rendered pages can use Docker's hostname.
-const browserApi = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
+const browserApi = process.env.API_INTERNAL_URL || "http://localhost:8000/api";
 const serverApi = process.env.API_INTERNAL_URL || browserApi;
 
 function rootUrl() {
