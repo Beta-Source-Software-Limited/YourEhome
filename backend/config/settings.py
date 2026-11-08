@@ -1,4 +1,4 @@
-"""YourEhome API settings. Secrets and hosting options come from environment variables."""
+
 import os
 from pathlib import Path
 
@@ -35,8 +35,7 @@ DATABASES = {"default": {
     "USER": os.getenv("MYSQL_USER", "yourehome"),
     "PASSWORD": os.getenv("MYSQL_PASSWORD", ""),
     "HOST": os.getenv("MYSQL_HOST", "127.0.0.1"),
-    "PORT": os.getenv("MYSQL_PORT", "3306"),
-    "OPTIONS": {"charset": "utf8mb4"},
+    "PORT": os.getenv("MYSQL_PORT", "3306")
 }}
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
